@@ -11,6 +11,10 @@ import Profile from "./profile";
 import UTable from "./table";
 import User from "./user";
 import ChangePass from "./changePass";
+import Product from "./product";
+import ProductCreate from "./productCreate";
+import ProductUpdate from "./productUpdate";
+import Cart from "./cart";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const token = localStorage.getItem("token");
@@ -32,6 +36,10 @@ root.render(
           <Route path="/table" element={<AuthCheck><UTable /></AuthCheck>} />
           <Route path="/user/:userId" element={<AuthCheck><User /></AuthCheck>} />
           <Route path="/change-password" element={<AuthCheck><ChangePass /></AuthCheck>} />
+          <Route path="/product" element={<AuthCheck><Product /></AuthCheck>} />
+          <Route path="/product-create" element={<AuthCheck><ProductCreate /></AuthCheck>} />
+          <Route path="/product-update/:userId" element={<AuthCheck><ProductUpdate /></AuthCheck>} />
+          <Route path="/product-cart/:userId" element={<AuthCheck><Cart /></AuthCheck>} />
         </Route>
       </Routes>
     </BrowserRouter>

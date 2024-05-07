@@ -172,7 +172,7 @@ function Header() {
                             <Dropdown.Menu>
                                 <Dropdown.Item href="/profile">Profile</Dropdown.Item>
                                 <Dropdown.Item href="/change-password">Change Password</Dropdown.Item>
-                                <Dropdown.Item href="/activity-log">Activity Log</Dropdown.Item>
+                                <Dropdown.Item href="/#">Activity Log</Dropdown.Item>
                                 <Dropdown.Item onClick={() => { logout() }}>Logout</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>

@@ -9,10 +9,7 @@ function Register() {
         firstName: "",
         lastName: "",
         email: "",
-        password: "",
-        country: "",
-        state: "",
-        mobile: "",
+        password: ""
     });
     const send = useNavigate();
     function register(e) {
@@ -64,25 +61,8 @@ function Register() {
                                                     <input type="password" onChange={(e) => setUser({ ...user, password: e.target.value })} className="form-control form-control-user"
                                                         id="exampleInputPassword" placeholder="Password" required />
                                                 </div>
-                                                <div className="col-sm-6 ">
-                                                    <input type="number" onChange={(e) => setUser({ ...user, mobile: e.target.value })} className="form-control form-control-user"
-                                                        id="exampleInputmobile" placeholder="Mobile Number" required />
-                                                </div>
                                             </div>
-                                            <div className="form-group row">
-                                                <select class="form-select col-sm-6 mb-3 form-control" aria-label="Default select example" onChange={(e) => setUser({ ...user, country: e.target.value })}>
-                                                    <option selected>Select the Country</option>
-                                                    <option value="India">India</option>
-                                                    <option value="America">America</option>
-                                                    <option value="caneda">caneda</option>
-                                                </select>
-                                                <select class="form-select col-sm-6 mb-3 form-control" aria-label="Default select example" onChange={(e) => setUser({ ...user, state: e.target.value })}>
-                                                    <option selected>Select the State</option>
-                                                    <option value="Gujarat">Gujarat</option>
-                                                    <option value="Mumbai">Mumbai</option>
-                                                    <option value="Panjab">Panjab</option>
-                                                </select>
-                                            </div>
+
                                             <button className="btn btn-primary btn-user btn-block">
                                                 Register Account
                                             </button>

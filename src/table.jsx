@@ -45,13 +45,9 @@ function UTable() {
             <Table>
                 <thead>
                     <tr>
-                        <th>Image</th>
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Email</th>
-                        <th>Country</th>
-                        <th>State</th>
-                        <th>Mobile</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -61,13 +57,9 @@ function UTable() {
                         userTable.map(user => {
                             return (
                                 <tr>
-                                    <td> <img src={process.env.REACT_APP_API + user.photo} alt='' style={{ width: '20%' }} /> </td>
                                     <td>{user.firstName}</td>
                                     <td>{user.lastName}</td>
                                     <td>{user.email}</td>
-                                    <td>{user.country}</td>
-                                    <td>{user.state}</td>
-                                    <td>{user.mobile}</td>
                                     <td><button onClick={() => UserRemove(user._id)} className='btn btn-danger'>Remove</button></td>
                                     <td><Link to={"/user/" + user._id} className='btn btn-success'>Edit</Link></td>
                                 </tr>
